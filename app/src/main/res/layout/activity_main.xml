@@ -1,0 +1,158 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="🌵 Car Rent Sonya 🌵"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:height="60dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#009688"
+        android:layout_marginTop="16dp"
+        android:textColor="#ECECEC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvCardType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:hint="Card Type"
+        android:textColor="#F10606"
+        android:textSize="18dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/radioGroupType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvCardType">
+
+        <RadioButton
+            android:id="@+id/rbPajero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pajero"
+            android:textColor="#0A196E"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbAlphard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alphard"
+            android:textColor="#0A196E"
+            app:layout_constraintStart_toEndOf="@+id/rbPajero"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbInnova"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Innova"
+            android:textColor="#0A196E"
+            app:layout_constraintStart_toEndOf="@+id/rbAlphard"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbBrio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brio"
+            android:textColor="#0A196E"
+            app:layout_constraintStart_toEndOf="@+id/rbInnova"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- TextView untuk tipe lokasi -->
+    <TextView
+        android:id="@+id/tvOutsideCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupType"
+        android:hint="Outside City"
+        android:textColor="#F10606"
+        android:textSize="18dp" />
+
+    <!-- RadioGroup untuk pilihan tipe lokasi -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvOutsideCity">
+
+        <RadioButton
+            android:id="@+id/rbInsideCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inside City"
+            android:textColor="#0A196E"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbOutsideCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Outside City"
+            android:textColor="#0A196E"
+            app:layout_constraintStart_toEndOf="@+id/rbInsideCity"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvDayOrRent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup1"
+        android:hint="Day Or Rent"
+        android:textColor="#F10606"
+        android:textSize="18dp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDayOrRent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etinputitem"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint=""
+            android:minHeight="8dp"
+            android:padding="8dp"
+            android:textColor="#0E0E0E"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Rent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
